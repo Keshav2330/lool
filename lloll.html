@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You, Kaakun 💖</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-color: #ffebf0;
+            padding: 50px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        #pookie {
+            width: 200px;
+        }
+        #message {
+            font-size: 24px;
+            color: #ff4081;
+            margin-bottom: 20px;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        #yes {
+            background-color: #ff4081;
+            color: white;
+        }
+        #no {
+            background-color: #bdbdbd;
+            color: black;
+        }
+        #likeBtn {
+            background-color: #ffd700;
+            color: black;
+            display: none;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="intro">
+        <img id="pookie" src="https://i.imgur.com/O1C8EFk.png" alt="Cute Pookie Bear">
+        <p id="message">Mr. Keshav has told me something... 🐻💖<br> He asked me not to tell you, but since you’re such a sweetie, I can’t hide it from you! 😚<br>So, do you want to proceed? 🥺💕</p>
+        <button id="yes" class="btn" onclick="showLove()">Yes</button>
+        <button id="no" class="btn" onclick="growYes()">No</button>
+    </div>
+    
+    <div class="container hidden" id="finalMessage">
+        <p style="font-size: 24px; color: #ff4081;">KESHAV REALLY LOVES YOU SO MUCH, KAAKUN! 💖✨</p>
+        <p style="font-size: 20px;">YOU ARE A GEM! 💎🥰<br>
+        I know you must be sad, but trust me, Keshav was really trying to cheer you up... 😘<br>
+        No problem, Kaakun, just talk to him after you’re free! 😊💕</p>
+        <button id="likeBtn" class="btn" onclick="alert('Yay! Keshav will be so happy! 🥰')">Did you like it? 🥺💗</button>
+    </div>
+    
+    <script>
+        let yesBtn = document.getElementById("yes");
+        let noBtn = document.getElementById("no");
+        let introDiv = document.getElementById("intro");
+        let finalMessageDiv = document.getElementById("finalMessage");
+        let likeBtn = document.getElementById("likeBtn");
+        let yesSize = 20;
+
+        function growYes() {
+            yesSize += 10;
+            yesBtn.style.fontSize = yesSize + "px";
+            yesBtn.style.padding = (yesSize / 2) + "px";
+        }
+
+        function showLove() {
+            introDiv.style.display = "none";
+            finalMessageDiv.style.display = "block";
+            likeBtn.style.display = "inline-block";
+        }
+    </script>
+</body>
+</html>
